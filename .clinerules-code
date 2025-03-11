@@ -1,0 +1,45 @@
+Code Generation Guidelines
+1.1 Consistency and Modularity
+Modular Design:
+Generate code in a modular fashion, ensuring that each component (e.g., authentication, help request, messaging, blockchain integration, AI services) is separated into clear modules.
+Use well-defined interfaces and clearly document the module interactions.
+Reusable Components:
+Code should favor reusable components, especially in the frontend (React Native/React.js) and backend (Rust modules).
+1.2 Security and Error Handling
+Secure Practices:
+All endpoints and smart contract functions must include robust error handling, input validation, and security measures (e.g., JWT authentication, encryption).
+Inline comments must detail security measures (e.g., “Localite: This function validates JWT tokens to ensure only authorized users access sensitive data”).
+Error Logging and Reporting:
+Code snippets should incorporate error logging mechanisms (using appropriate logging libraries in Rust or React Native) to facilitate debugging.
+Include comments that reference Localite’s emphasis on security, especially for sensitive operations like escrow transactions or AI data processing.
+1.3 Documentation and Inline Comments
+Inline Documentation:
+Every function, class, or module must have inline comments or docstrings (using Rust’s /// comments or JSDoc for React components).
+Comments should explain the purpose of the code, describe input parameters, expected outputs, and any side effects.
+Localite-Specific References:
+All generated code should refer to Localite-specific business logic. For example, mention “Localite’s matchmaking algorithm” or “Localite’s blockchain escrow mechanism.”
+Code Readability:
+Use clear and descriptive variable names, consistent indentation, and formatting.
+Follow language-specific best practices and style guides (e.g., Rust Style Guide, React Native Style Guidelines).
+1.4 Performance and Scalability
+Asynchronous Processing:
+Where applicable, generate asynchronous code (e.g., using Tokio in Rust for API calls) to ensure high performance.
+Efficient Data Handling:
+Emphasize efficient data queries, caching, and resource management to support scalability.
+Modular Testing:
+Every code snippet should be accompanied by testing instructions or example tests (unit tests, integration tests).
+1.5 Integration and Deployment
+API Integration:
+Code should be designed to integrate seamlessly with our backend APIs, blockchain endpoints, and AI services.
+Use RESTful design principles and ensure endpoints are self-documented.
+Cross-Platform Compatibility:
+Ensure that code for the frontend supports both iOS and Android (or web) using shared libraries and standardized interfaces.
+CI/CD Readiness:
+Include comments on how the code integrates with our CI/CD pipelines (e.g., “Localite: This module is designed for seamless deployment via GitHub Actions”).
+1.6 Final Notes and Usage
+Prefix Every Prompt:
+All prompts must start with “Localite:” to ensure the AI generates context-specific code that aligns with our platform’s vision and requirements.
+Continuous Feedback Loop:
+Use the generated code as a baseline and iterate with additional prompts to refine functionalities and fix issues.
+Maintain Consistency:
+Regularly update these instructions to reflect any changes in Localite’s architecture, features, or business model.

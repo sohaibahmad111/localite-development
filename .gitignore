@@ -1,6 +1,4 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# Node modules & dependencies
+# Node modules & dependencies (React Native)
 node_modules/
 npm-debug.log
 yarn.lock
@@ -11,11 +9,20 @@ package-lock.json
 .expo-shared/
 metro-cache/
 
-# Build artifacts
+# Build artifacts (React Native)
 android/app/build/
 ios/Pods/
 ios/build/
 
+# Rust target directory
+target/
+
+# Cargo lock file
+Cargo.lock
+
+# Debugging & logs
+*.log
+*.rs.bk
+
 # System files
 .DS_Store
-*.log

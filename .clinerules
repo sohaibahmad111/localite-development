@@ -1,0 +1,92 @@
+You are now working on the Localite project. Localite is a decentralized platform that connects non-locals with trusted locals for real-time assistance. It features a blockchain-powered reward system, AI-driven matchmaking, secure user authentication, a social community for content sharing, and robust cross-platform functionality (React Native for iOS/Android and React.js for Web). The platform also includes comprehensive business model elements such as escrow payments, staking, and revenue sharing through blockchain transaction fees.
+When generating code, designing architecture, or bug fixing, please use the following details of Localite:
+1. Project Overview & Vision
+Localite’s Mission: Localite is a decentralized, blockchain-powered platform designed to connect non-locals with trusted local experts for real-time assistance and support. Our vision is to revolutionize the way people access localized help—whether for travel, relocation, or everyday tasks—by combining AI-driven matchmaking, secure blockchain transactions, and a robust social networking ecosystem.
+Key Objectives:
+Real-Time Assistance: Enable immediate help through a structured process where non-locals post requests, and verified locals submit proposals.
+Decentralized Rewards: Leverage our custom blockchain to reward local helpers, allow staking for passive income, and generate revenue from transaction fees.
+AI-Powered Matchmaking: Utilize AI to rank and prioritize local helpers based on proximity (using geolocation algorithms), skillset, and historical ratings.
+Social Engagement: Build an internal social network where users can share content, engage in community discussions, and have their contributions ranked and rewarded.
+Cross-Platform Delivery: Ensure a consistent, secure, and engaging experience on Android, iOS (via React Native), and the web (via React.js).
+Security & Scalability: Implement robust security measures (JWT, 2FA, encryption) and design for scalability (modular backend in Rust, CI/CD, containerization).
+
+2. Application Architecture & Components
+2.1 Frontend
+Mobile App:
+Built with React Native for iOS and Android.
+Uses modular, reusable UI components (dashboards, chat screens, help request forms, community feeds).
+Incorporates navigation (React Navigation), state management, and secure API integration.
+Web App:
+Developed with React.js to provide a similar user experience as the mobile app.
+Maintains consistency in UI/UX and integrates with the same backend APIs.
+Key UI/UX Details:
+Intuitive registration/login screens, real-time chat interfaces, visually appealing community feeds, and clear indicators for blockchain wallet balances and staking rewards.
+Accessibility and responsiveness across different device types.
+2.2 Backend
+Language & Framework:
+Built using Rust with the Actix-Web framework for high performance, safety, and concurrency.
+Core Modules:
+Authentication: JWT-based user login, registration, 2FA, and government ID verification.
+Help Request & Proposal Management: Endpoints to post help requests, manage proposals, and update task statuses.
+Real-Time Communication: API endpoints for secure messaging and integration with WebSocket services.
+Blockchain API Integration: Endpoints to interact with our custom blockchain for transactions, staking, and escrow payments.
+AI Integration: Endpoints that call external AI services (via REST or gRPC) for matchmaking, fraud detection, and content ranking.
+Database:
+PostgreSQL for persistent structured data (users, help requests, transactions).
+SQLite for lightweight local data (if needed) and potential decentralized storage using IPFS for large files.
+2.3 Blockchain Layer
+Custom Blockchain:
+Built using Substrate (Rust-based framework) with a Proof-of-Stake (PoS) consensus mechanism.
+Implements our own native token for rewards, staking, and transaction fees.
+Smart Contracts:
+Developed with Ink! for functionalities such as escrow (holding funds until task completion), staking (earning rewards by locking tokens), and token management.
+Integration:
+Smart contracts are integrated with the backend API via secure endpoints to ensure seamless interactions.
+2.4 AI & Machine Learning Modules
+Use Cases:
+Matchmaking: AI models calculate match scores using location (Haversine distance), skillset, and ratings.
+Fraud Detection: Unsupervised learning models monitor user activities (both online and physical) to flag anomalies.
+Content Ranking: AI ranks community posts based on engagement metrics (likes, comments, shares) to reward valuable contributions.
+Tools & Libraries:
+TensorFlow or PyTorch for model development.
+Optionally, Rust-based ML libraries (e.g., Linfa) for lighter integration.
+Integration:
+AI services are exposed as microservices and integrated via API endpoints with proper error handling and asynchronous processing.
+
+3. Business Model Integration
+Revenue Streams:
+Advertising: Display targeted ads during user interactions with 60% of revenue shared with users.
+Service Fees: Earn 10% on tour guide hires and 5% on task outsourcing.
+Blockchain Fees: Generate revenue through transaction fees on our native blockchain.
+Premium Subscriptions & Partnerships: Additional revenue from premium features and partnerships with local businesses and government departments.
+User Incentives:
+Users earn rewards for providing assistance, and they can stake their tokens for passive income.
+Transparent blockchain records ensure trust and engagement.
+
+4. Security & Testing Standards
+Security Measures:
+Data encryption (AES-256), secure JWT authentication, two-factor authentication (2FA), and role-based access control.
+Blockchain smart contracts undergo rigorous audits and testing.
+Testing Protocols:
+Unit tests for backend and frontend modules (using Rust’s testing framework, Jest for React Native).
+Integration tests using Postman and automated CI/CD pipelines (Docker, Kubernetes).
+Load and penetration testing for security validation.
+Documentation:
+Inline documentation (Rust docstrings, JSDoc for React components, Python docstrings for AI modules) and external API documentation via OpenAPI/Swagger.
+
+5. Continuous Integration & Deployment (CI/CD)
+Automation:
+Use GitHub Actions or similar tools to automate testing, building, and deployment.
+Continuous monitoring using Prometheus and Grafana.
+Best Practices:
+Maintain a clear Git branching strategy (e.g., Git Flow) and detailed commit messages.
+Regular code reviews and security scans.
+
+6. Custom Instruction Mode for Roo Code
+When using Roo Code in VS Code, ensure every prompt begins with “Localite:” to enforce context. Use the following guidelines for all modes:
+Architecture Mode: Always generate modular, secure code with clear separation between authentication, help management, communication, blockchain interactions, and AI integration. Include detailed inline comments and docstrings that reference Localite’s business logic.
+Ask Mode: When requesting help or clarification, always include references such as “Localite’s custom blockchain,” “Localite’s real-time matchmaking,” and “Localite’s cross-platform UI.” Request best practices and security measures in every code snippet.
+Code Mode: Generate precise, production-ready code that adheres to our design standards. Every snippet should include error handling, logging, and comments explaining Localite-specific functionalities (e.g., escrow payment flows, smart contract functions, AI model predictions, and user engagement strategies).
+Final Notes:
+Localite’s holistic ecosystem is built on secure, scalable, and decentralized technologies. Every piece of code must support our vision of real-time, verified assistance combined with a thriving community and innovative earning opportunities.
+The instructions must ensure that every module (backend, frontend, blockchain, AI) integrates seamlessly while maintaining robust security, comprehensive testing, and thorough documentation.
