@@ -1,0 +1,21 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# Node modules & dependencies
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Expo & Metro cache
+.expo/
+.expo-shared/
+metro-cache/
+
+# Build artifacts
+android/app/build/
+ios/Pods/
+ios/build/
+
+# System files
+.DS_Store
+*.log
