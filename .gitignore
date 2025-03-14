@@ -26,3 +26,7 @@ Cargo.lock
 
 # System files
 .DS_Store
+
+
+#ENV FIle
+.env
