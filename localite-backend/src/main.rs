@@ -1,5 +1,5 @@
-use actix_web::http::header;
 use actix_cors::Cors;
+use actix_web::http::header;
 use actix_web::{web, App, HttpResponse, HttpServer, Responder};
 
 mod db;
@@ -9,7 +9,6 @@ mod schema;
 
 use crate::repository::get_users;
 
-#[actix_web::main]
 async fn hello() -> impl Responder {
     HttpResponse::Ok().body("Hello, Localite Backend!")
 }
@@ -22,8 +21,6 @@ async fn users_handler() -> Result<HttpResponse, actix_web::Error> {
 }
 
 #[actix_web::main]
-use actix_web::http::header;
-
 async fn main() -> std::io::Result<()> {
     // Load environment variables from .env file
     dotenvy::dotenv().ok();
